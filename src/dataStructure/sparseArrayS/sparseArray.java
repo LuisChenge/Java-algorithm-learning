@@ -1,4 +1,4 @@
-package algorithm;
+package dataStructure.sparseArrayS;
 
 import java.util.Random;
 
@@ -10,9 +10,9 @@ public class sparseArray {
         int[][] chessArr1 = new int[11][11];
         int nowChess = 30;
         for (int i = 1; i < nowChess; i++) {
-                int row = new Random().nextInt(11);
-                int cal = new Random().nextInt(11);
-                chessArr1[row][cal] = i;
+            int row = new Random().nextInt(11);
+            int cal = new Random().nextInt(11);
+            chessArr1[row][cal] = i;
         }
         // 输出原始的二维数组
         System.out.println("原始的二维数组~~");
@@ -74,7 +74,7 @@ public class sparseArray {
 
         //2. 在读取稀疏数组后几行的数据(从第二行开始)，并赋给 原始的二维数组 即可
 
-        for(int i = 1; i < sparseArr.length; i++) {
+        for (int i = 1; i < sparseArr.length; i++) {
             chessArr2[sparseArr[i][0]][sparseArr[i][1]] = sparseArr[i][2];
         }
 
