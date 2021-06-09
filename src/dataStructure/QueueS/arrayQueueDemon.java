@@ -2,9 +2,9 @@ package dataStructure.QueueS;
 
 import java.util.Scanner;
 
-public class arrayQueueDemon {
+public class ArrayQueueDemon {
     public static void main(String[] args) {
-        arrayQueue bankQueue = new arrayQueue(6);
+        ArrayQueue bankQueue = new ArrayQueue(6);
         Scanner scanner = new Scanner(System.in);
         char key = 'm';
         boolean loop = true;
@@ -44,14 +44,14 @@ public class arrayQueueDemon {
 
     }
 
-    static class arrayQueue {
+    static class ArrayQueue {
         private int front;
         private int tail;
         int[] arr;
         int maxSize;
 
         // arrayQueue类的构造方法 初始化队列
-        arrayQueue(int maxSize) {
+        ArrayQueue(int maxSize) {
             this.maxSize = maxSize;
             tail = -1;
             front = -1;

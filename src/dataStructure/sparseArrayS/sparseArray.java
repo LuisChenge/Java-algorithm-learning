@@ -2,7 +2,7 @@ package dataStructure.sparseArrayS;
 
 import java.util.Random;
 
-public class sparseArray {
+public class SparseArray {
 
     public static void main(String[] args) {
         // 创建一个原始的二维数组 11 * 11
