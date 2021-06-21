@@ -2,7 +2,6 @@
 
 ## 循环队列
 
-[toc]
 [源代码](../../src/dataStructure/QueueS/CircleArrayQueueDemo.java)
 
 ### 目的

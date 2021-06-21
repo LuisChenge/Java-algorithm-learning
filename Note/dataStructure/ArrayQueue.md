@@ -1,7 +1,5 @@
 ## ArrayQueue 队列
 
-[TOC]
-
 [源代码](../../src/dataStructure/QueueS/ArrayQueueDemon.java)
 
 ### 目的

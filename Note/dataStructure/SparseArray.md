@@ -1,7 +1,5 @@
 ## sparseArray 稀疏数组
 
-[TOC]
-
 [稀疏数组源码](../../src/dataStructure/sparseArrayS/SparseArray.java)
 
 ### 目的
