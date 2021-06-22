@@ -1,6 +1,6 @@
 ## sparseArray 稀疏数组
 
-[稀疏数组源码](../../src/dataStructure/sparseArrayS/SparseArray.java)
+[稀疏数组源码](../../src/dataStructure/SparseArray/SparseArray.java)
 
 ### 目的
 
