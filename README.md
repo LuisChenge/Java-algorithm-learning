@@ -1,4 +1,4 @@
-## Java dataStructure learning
+## java数据结构算法
 
 ### 介绍
 java数据结构算法学习笔记 ^____^ ，代码在 [src](src/dataStructure) 文件夹里面。如有错误，希望能够指出并issue。
