@@ -4,92 +4,85 @@ public class SingleLinkedListDemo {
     public static void main(String[] args) {
         MyLinkedList linkedList = new MyLinkedList();
         linkedList.addAtHead(1);
+        linkedList.get(1);
+        linkedList.addAtIndex(1,2);
         linkedList.addAtTail(3);
-        linkedList.addAtIndex(1, 2);   //链表变为1-> 2-> 3
-        System.out.println(linkedList.get(1));            //返回2
-        linkedList.deleteAtIndex(1);  //现在链表是1-> 3
-        System.out.println(linkedList.get(1));            //返回3
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
-    static class MyLinkedList {
-        int size;
-        ListNode head;  // 作为伪头的哨兵节点
-
-        public MyLinkedList() {
-            size = 0;
-            head = new ListNode(0);
-        }
-
-        // 获取链表中第x个节点的索引值。如果索引无效，则返回-1。
-        public int get(int index) {
-            // 如果索引无效
-            if (index < 0 || index >= size) return -1;
-            ListNode curr = head;
-            // 需要遍历索引
-            // 从sentinel节点移动到想要的索引
-            for (int i = 0; i < index + 1; ++i) curr = curr.next;
-            return curr.val;
-        }
-
-        //  在链表的第一个元素之前添加值为val的节点。
-        //  插入后，新节点将成为链表的第一个节点。
-        public void addAtHead(int val) {
-            addAtIndex(0, val);
-        }
-
-        //  将值为val的节点附加到链表的最后一个元素。
-        public void addAtTail(int val) {
-            addAtIndex(size, val);
-        }
-
-        //  在链表的索引节点之前添加一个值为val的节点。
-        //  如果索引等于链表的长度，则节点将附加到链表的末尾。
-        //  如果索引大于长度，则不会插入节点。
-        public void addAtIndex(int index, int val) {
-            // 如果索引大于长度，则不会插入节点。
-            if (index > size) return;
-
-            // 如果索引为负，
-            // 节点将插入列表的开头。
-            if (index < 0) index = 0;
-
-            ++size;
-            // 查找要添加的节点的前置节点
-            ListNode pred = head;
-            for (int i = 0; i < index; ++i) pred = pred.next;
-
-            // 要添加的节点
-            ListNode toAdd = new ListNode(val);
-            // 插入本身
-            toAdd.next = pred.next;
-            pred.next = toAdd;
-        }
-
-        //  如果索引有效，请删除链表中的第th个节点。
-        public void deleteAtIndex(int index) {
-            // 如果索引无效，则不执行任何操作
-            if (index < 0 || index >= size) return;
-
-            size--;
-            // 查找要删除的节点的前置节点
-            ListNode pred = head;
-            for (int i = 0; i < index; ++i) pred = pred.next;
-
-            // 删除 pred.next
-            pred.next = pred.next.next;
-        }
+        System.out.println(linkedList.get(2));
     }
 }
+class linkNode{
+    int data;
+    linkNode next;
 
-//        来源：力扣（LeetCode）
-//        链接：https://leetcode-cn.com/problems/design-linked-list
-//        著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+    public linkNode(int data) {
+        this.data = data;
+    }
+
+}
+
+class MyLinkedList {
+
+    int size;
+    linkNode head;
+    public MyLinkedList() {
+        size = 0;
+        head = new linkNode(0);
+    }
+
+    /**
+     * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
+     * @return linkNode.data
+     */
+    public int get(int index) {
+        // 对index判断如果index小于零就将index=0
+        if (index <= 0 || index > size) return -1;
+        linkNode curr = head;
+
+        for (int i = 0; i < index; i++) {
+            curr = curr.next;
+        }
+        return curr.data;
+    }
+
+    /**
+     * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+     */
+    public void addAtHead(int val) {
+        addAtIndex(0,val);
+    }
+
+    /**
+     * Append a node of value val to the last element of the linked list.
+     */
+    public void addAtTail(int val) {
+        addAtIndex(size,val);
+    }
+
+    /**
+     * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
+     */
+    public void addAtIndex(int index, int val) {
+        // 构造一个新节点
+        linkNode newNode = new linkNode(val);
+        // 构造指针用于遍历
+        linkNode curr = head;
+
+        // 对index进行判断
+        if (index > size) return;
+
+        if (index < 0) index = 0;
+        size++;
+        for (int i = 0; i < index-1; i++) {
+            curr = curr.next;
+        }
+        newNode.next = curr.next;
+        curr.next = newNode;
+    }
+
+    /**
+     * Delete the index-th node in the linked list, if the index is valid.
+     */
+    public void deleteAtIndex(int index) {
+
+    }
+}
