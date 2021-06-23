@@ -2,7 +2,7 @@
 
 [稀疏数组源码](../../src/dataStructure/SparseArray/SparseArray.java)
 
-### 目的
+### 编码目的
 
 1. 将11*11二维数组内的有效数据转换成新数组，达到节约空间的目的
 

@@ -2,7 +2,7 @@
 
 [源代码](../../src/dataStructure/QueueS/ArrayQueueDemon.java)
 
-### 目的
+### 编码目的
 
 1. 使用数组模拟队列
 2. 并且具有添加数据、获取数据、展示队列、展示头部i数据

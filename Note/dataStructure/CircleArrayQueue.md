@@ -4,7 +4,7 @@
 
 [源代码](../../src/dataStructure/QueueS/CircleArrayQueueDemo.java)
 
-### 目的
+### 编码目的
 1. [队列](ArrayQueue.md)只能使用一次,浪费存储空间。
 2. 对前面的数组模拟队列的优化，充分利用数组. 因此将数组看做是一个环形的
 
