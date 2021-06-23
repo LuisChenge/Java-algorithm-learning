@@ -8,11 +8,13 @@
 
 ### 算法复杂度分析
 
-时间复杂度：
-addAtHead： **O(1)**
-addAtInder，get，deleteAtIndex: **O(k)**，其中 k 指的是元素的索引。
-addAtTail：**O(N)**，其中 N 指的是链表的元素个数。
-空间复杂度：所有的操作都是 **O(1)**。
+####时间复杂度：
+* addAtHead： **O(1)**
+* addAtInder，get，deleteAtIndex: **O(k)**，其中 k 指的是元素的索引。
+* addAtTail：**O(N)**，其中 N 指的是链表的元素个数。
+
+####空间复杂度：
+  * 所有的操作都是 **O(1)**。
 
 
 
@@ -28,8 +30,8 @@ addAtTail：**O(N)**，其中 N 指的是链表的元素个数。
 ![SingleLinkedListP1](imageFile/SingleLinkedListP1.png)
 1. 跟据链表的定义，我们可以很轻易的理解问题
 2. 难点在于编码上
-3. 我们需要一个头部节点用于管理整个链表，这个头部节点就代表了整个链表，我们添加删除操作都可以通过访问头部节点然后遍历节点，便可以完成一系列操作了
-4. 创建一个伪头部，不存放数据。只用于管理链表，链表中的每一个节点都是next属性等于下一个节点的地址 `linkNode.next= nextlinkNode`
+3. 我们需要一个头部节点用于管理整个链表，这个头部节点就代表了整个链表，我们添加删除操作都可以通过访问头部节点然后遍历节点完成操作。
+4. 创建一个伪头部，不存放数据。只用于管理链表，链表中的每一个节点都是next属性等于下一个节点的地址 `linkNode.next= nextlinkNode`。
 5. 每一个节点就是一个对象，添加新节点就是将linkNode.next等于匿名对象的地址，这样便可以保存地址了
 
 
@@ -63,5 +65,7 @@ addAtTail：**O(N)**，其中 N 指的是链表的元素个数。
 * 将值为 val 的节点追加到链表的最后一个元素 `addAtTail(val)`
   * 在头部添加节点和在尾部添加节点其实可以调用`addAtIndex(index,val)`便可以解决
   * 添加到尾部`addAtIndex(size,val)`
-  * 
+  * 添加到头部`addAtIndex(0,val)`
 * 删除链表中的第 index 个节点 `deleteAtIndex(index)`
+  * 找到要删除节点的前一个节点。
+  * 通过改变 next 来删除节点。
