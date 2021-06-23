@@ -1,6 +1,6 @@
 ## 单链表
 
-[源代码](../../src/dataStructure/SingleLinkedList)
+[源代码](../../src/dataStructure/SingleLinkedList/SingleLinkedListDemo.java)
 
 ### 定义
 单链表是一种链式存取的数据结构，用一组地址任意的存储单元存放线性表中的数据元素。
