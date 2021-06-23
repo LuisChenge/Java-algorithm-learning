@@ -4,10 +4,9 @@ public class SingleLinkedListDemo {
     public static void main(String[] args) {
         MyLinkedList linkedList = new MyLinkedList();
         linkedList.addAtHead(1);
-        linkedList.addAtIndex(1,2);
+        linkedList.addAtTail(2);
         linkedList.addAtTail(3);
-        linkedList.deleteAtIndex(2);
-        linkedList.show();
+        System.out.println(linkedList.get(0));
     }
 }
 
@@ -39,12 +38,10 @@ class MyLinkedList {
 
     public int get(int index) {
         // 对index判断
-        if (index <= 0 || index > size) return -1;
+        if (index < 0 || index >= size) return -1;
         linkNode curr = head;
 
-        for (int i = 0; i < index; i++) {
-            curr = curr.next;
-        }
+        for (int i = 0; i < index + 1; i++) curr = curr.next;
         return curr.data;
     }
 
