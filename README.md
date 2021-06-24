@@ -9,8 +9,9 @@ java数据结构算法学习笔记 ^____^ ，代码在 [src](src/dataStructure) 
 
 ### **索引**
 
-* 算法
-* 数据结构
+##### 算法
+  * [反转单链表](Note/algorithm/reverseList.md)
+##### 数据结构
   * [稀疏数组](Note/dataStructure/SparseArray.md)
   * [队列](Note/dataStructure/ArrayQueue.md)
   * [循环队列](Note/dataStructure/CircleArrayQueue.md)
@@ -31,3 +32,6 @@ java数据结构算法学习笔记 ^____^ ，代码在 [src](src/dataStructure) 
 #### 2021年6月23号
 * 完成单链表源代码
 * 完成单链表源代码的笔记
+
+### 2021年6月24号
+* 完成反转单链表的笔记，思路来自leetcode
