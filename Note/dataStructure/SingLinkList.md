@@ -69,3 +69,6 @@
 * 删除链表中的第 index 个节点 `deleteAtIndex(index)`
   * 找到要删除节点的前一个节点。
   * 通过改变 next 来删除节点。
+  
+### 拓展算法
+* [反转单链表](../algorithm/reverseList.md)
