@@ -6,7 +6,7 @@ public class SingleLinkedListDemo {
         linkedList.addAtHead(1);
         linkedList.addAtTail(2);
         linkedList.addAtTail(3);
-        System.out.println(linkedList.get(0));
+        linkedList.show();
     }
 }
 
@@ -28,8 +28,8 @@ class linkNode {
 
 class MyLinkedList {
 
+    public linkNode head;
     int size;
-    linkNode head;
 
     public MyLinkedList() {
         size = 0;
